@@ -75,7 +75,7 @@
             this.picRodA.Size = new System.Drawing.Size(353, 325);
             this.picRodA.TabIndex = 0;
             this.picRodA.TabStop = false;
-            this.picRodA.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picRodA.Click += new System.EventHandler(this.picRod_Click);
             // 
             // label1
             // 
@@ -98,7 +98,7 @@
             this.picRodB.Size = new System.Drawing.Size(353, 325);
             this.picRodB.TabIndex = 0;
             this.picRodB.TabStop = false;
-            this.picRodB.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picRodB.Click += new System.EventHandler(this.picRod_Click);
             // 
             // label2
             // 
@@ -120,7 +120,7 @@
             this.picRodC.Size = new System.Drawing.Size(353, 325);
             this.picRodC.TabIndex = 0;
             this.picRodC.TabStop = false;
-            this.picRodC.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picRodC.Click += new System.EventHandler(this.picRod_Click);
             // 
             // label3
             // 
@@ -157,6 +157,7 @@
             this.pic2.TabStop = false;
             this.pic2.Tag = "2";
             this.pic2.Visible = false;
+            this.pic2.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // pic8
             // 
@@ -169,7 +170,7 @@
             this.pic8.TabStop = false;
             this.pic8.Tag = "8";
             this.pic8.Visible = false;
-            this.pic8.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pic8.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // pic7
             // 
@@ -182,7 +183,7 @@
             this.pic7.TabStop = false;
             this.pic7.Tag = "7";
             this.pic7.Visible = false;
-            this.pic7.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pic7.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // pic6
             // 
@@ -195,7 +196,7 @@
             this.pic6.TabStop = false;
             this.pic6.Tag = "6";
             this.pic6.Visible = false;
-            this.pic6.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pic6.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // pic5
             // 
@@ -208,7 +209,7 @@
             this.pic5.TabStop = false;
             this.pic5.Tag = "5";
             this.pic5.Visible = false;
-            this.pic5.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pic5.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // pic4
             // 
@@ -221,7 +222,7 @@
             this.pic4.TabStop = false;
             this.pic4.Tag = "4";
             this.pic4.Visible = false;
-            this.pic4.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pic4.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // pic3
             // 
@@ -234,7 +235,7 @@
             this.pic3.TabStop = false;
             this.pic3.Tag = "3";
             this.pic3.Visible = false;
-            this.pic3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pic3.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // lblTime
             // 
@@ -376,6 +377,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tháp Hà Nội";
             this.Load += new System.EventHandler(this.ThapHaNoi_Load);
+            this.Click += new System.EventHandler(this.picRod_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picRodA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRodB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRodC)).EndInit();

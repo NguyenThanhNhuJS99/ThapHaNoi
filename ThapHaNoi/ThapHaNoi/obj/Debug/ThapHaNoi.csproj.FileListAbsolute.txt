@@ -8,3 +8,13 @@ C:\Users\Nhu\Desktop\ThapHaNoi\ThapHaNoi\obj\Debug\ThapHaNoi.csproj.GenerateReso
 C:\Users\Nhu\Desktop\ThapHaNoi\ThapHaNoi\obj\Debug\ThapHaNoi.csproj.CoreCompileInputs.cache
 C:\Users\Nhu\Desktop\ThapHaNoi\ThapHaNoi\obj\Debug\ThapHaNoi.exe
 C:\Users\Nhu\Desktop\ThapHaNoi\ThapHaNoi\obj\Debug\ThapHaNoi.pdb
+C:\Users\Nhu\Desktop\Git_THN\ThapHaNoi\ThapHaNoi\ThapHaNoi\bin\Debug\ThapHaNoi.exe.config
+C:\Users\Nhu\Desktop\Git_THN\ThapHaNoi\ThapHaNoi\ThapHaNoi\bin\Debug\ThapHaNoi.exe
+C:\Users\Nhu\Desktop\Git_THN\ThapHaNoi\ThapHaNoi\ThapHaNoi\bin\Debug\ThapHaNoi.pdb
+C:\Users\Nhu\Desktop\Git_THN\ThapHaNoi\ThapHaNoi\ThapHaNoi\obj\Debug\ThapHaNoi.csprojAssemblyReference.cache
+C:\Users\Nhu\Desktop\Git_THN\ThapHaNoi\ThapHaNoi\ThapHaNoi\obj\Debug\ThapHaNoi.Properties.Resources.resources
+C:\Users\Nhu\Desktop\Git_THN\ThapHaNoi\ThapHaNoi\ThapHaNoi\obj\Debug\ThapHaNoi.ThapHaNoi.resources
+C:\Users\Nhu\Desktop\Git_THN\ThapHaNoi\ThapHaNoi\ThapHaNoi\obj\Debug\ThapHaNoi.csproj.GenerateResource.cache
+C:\Users\Nhu\Desktop\Git_THN\ThapHaNoi\ThapHaNoi\ThapHaNoi\obj\Debug\ThapHaNoi.csproj.CoreCompileInputs.cache
+C:\Users\Nhu\Desktop\Git_THN\ThapHaNoi\ThapHaNoi\ThapHaNoi\obj\Debug\ThapHaNoi.exe
+C:\Users\Nhu\Desktop\Git_THN\ThapHaNoi\ThapHaNoi\ThapHaNoi\obj\Debug\ThapHaNoi.pdb
