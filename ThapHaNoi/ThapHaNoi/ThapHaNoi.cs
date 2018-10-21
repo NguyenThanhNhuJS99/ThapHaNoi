@@ -55,10 +55,9 @@ namespace ThapHaNoi
         {
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Luật chơi:\n- Mỗi lần chỉ được di chuyển 1 đĩa trên cùng của cọc.\n- Đĩa nằm trên phải nhỏ hơn đĩa nằm dưới.", 
+            MessageBox.Show("Luật chơi:\n- Mỗi lần chỉ được di chuyển 1 đĩa trên cùng của cọc.\n- Đĩa nằm trên phải nhỏ hơn đĩa nằm dưới. \n- Di chuyển hết đĩa từ cột A sang C để chiến thắng.", 
                 "Luật Chơi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
