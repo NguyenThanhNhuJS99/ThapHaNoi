@@ -51,6 +51,7 @@
             this.btnShowRule = new System.Windows.Forms.Button();
             this.btnGivenIn = new System.Windows.Forms.Button();
             this.btnPlay = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picRodA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRodB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRodC)).BeginInit();
@@ -419,6 +420,7 @@
         private System.Windows.Forms.Button btnShowRule;
         private System.Windows.Forms.Button btnGivenIn;
         private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
