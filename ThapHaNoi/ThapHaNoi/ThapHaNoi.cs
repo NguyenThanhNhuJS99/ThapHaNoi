@@ -65,7 +65,7 @@ namespace ThapHaNoi
             disksA.Clear();disksB.Clear();disksC.Clear();                                       // Xóa hết các đĩa trong các cột
             picRodA.BorderStyle = picRodB.BorderStyle = picRodC.BorderStyle = BorderStyle.None; // Ẩn viền cột đã chọn ở trước
             firstClickedDisks = secondClickedDisks = null;
-            //Initialze
+            //Initialize
             nudLevel.Enabled = false;                                                           // Không cho chọn level
             btnGivenIn.Enabled = true;                                                          // Hiển thị nút chơi lại
             btnPlay.Text = "Chơi Lại";                                                          // Thay đổi Text hiển thị
@@ -112,18 +112,18 @@ namespace ThapHaNoi
         }
         private void ProcessMovingDisk(PictureBox clickedRod)
         {
-            if (secondClickedDisks.Count == 0)                                          // Ở cột 2 đang không có đĩa
+            if (secondClickedDisks.Count == 0)                                                              // Ở cột 2 đang không có đĩa
             {
-                MoveDisk(new Point(clickedRod.Location.X + DISTXFROMRODTODISK, FIRSTY));    // Di chuyển đĩa
+                MoveDisk(new Point(clickedRod.Location.X + DISTXFROMRODTODISK, FIRSTY));                    // Di chuyển đĩa
             }
             else
             {
-                PictureBox firstTopDisk = firstClickedDisks.Peek();         //Lấy thông tin đĩa đầu của cột 1
-                PictureBox secondTopDisk = secondClickedDisks.Peek();       //Lấy thông tin đĩa đầu của cột 2
-                if (int.Parse(firstTopDisk.Tag.ToString()) < int.Parse(secondTopDisk.Tag.ToString()))  //So sánh 2 đĩa thông qua thuộc tính tag
-                    MoveDisk(new Point(secondTopDisk.Location.X, secondTopDisk.Location.Y - DISKHEIGHT)); //Di chuyển đĩa tới vị trí mới có tọa độ mới
+                PictureBox firstTopDisk = firstClickedDisks.Peek();                                         //Lấy thông tin đĩa đầu của cột 1
+                PictureBox secondTopDisk = secondClickedDisks.Peek();                                       //Lấy thông tin đĩa đầu của cột 2
+                if (int.Parse(firstTopDisk.Tag.ToString()) < int.Parse(secondTopDisk.Tag.ToString()))       //So sánh 2 đĩa thông qua thuộc tính tag
+                    MoveDisk(new Point(secondTopDisk.Location.X, secondTopDisk.Location.Y - DISKHEIGHT));   //Di chuyển đĩa tới vị trí mới có tọa độ mới
                 else
-                    secondClickedDisks = null;    // Không hợp lệ nên bỏ đánh dấu lần chọn thứ 2
+                    secondClickedDisks = null;                                                              // Không hợp lệ nên bỏ đánh dấu lần chọn thứ 2
             }
         }
         private void MoveDisk(Point point)
