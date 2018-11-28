@@ -62,9 +62,9 @@ namespace ThapHaNoi
             moveCount = 0;                                                                      // Trả số lần di chuyển về 0
             lblTime.Text = "Thời Gian: 00:00:00";
             lbMoveCout.Text = "Số Lần Di Chuyển: 0 lần";
-            disksA.Clear();disksB.Clear();disksC.Clear();                                       // Xóa hết các đĩa trong các cột
+            disksA.Clear();disksB.Clear();disksC.Clear();    //*****                            // Xóa hết các đĩa trong các cột
             picRodA.BorderStyle = picRodB.BorderStyle = picRodC.BorderStyle = BorderStyle.None; // Ẩn viền cột đã chọn ở trước
-            firstClickedDisks = secondClickedDisks = null;
+            firstClickedDisks = secondClickedDisks = null;                               //**
             //Initialize
             nudLevel.Enabled = false;                                                           // Không cho chọn level
             btnGivenIn.Enabled = true;                                                          // Hiển thị nút chơi lại
@@ -74,7 +74,7 @@ namespace ThapHaNoi
             {
                 disks[i].Location=new Point(x,y);                                               // Tạo tọa độ mới của đĩa
                 disks[i].Visible = true;                                                        // Hiển thị đĩa
-                disksA.Push(disks[i]);                                                          // Thêm đĩa vào cột A
+                disksA.Push(disks[i]);                                     //***                // Thêm đĩa vào cột A
             }
             tmCoutTime.Start();                                                                 // Bắt đầu đềm thời gian
         }
@@ -90,11 +90,11 @@ namespace ThapHaNoi
         {
             if (nudLevel.Enabled) return; // Lúc này nút không được điều chỉnh đồng nghĩa với việc hiện tại không chơi nên không click
             PictureBox clickedRod = (PictureBox)sender;     //Lấy thông tin cột được click
-            Stack<PictureBox> disksOfClickedRod = (Stack<PictureBox>)clickedRod.Tag; //Lấy ra stack ứng với cột click
+            Stack<PictureBox> disksOfClickedRod = (Stack<PictureBox>)clickedRod.Tag; //Lấy ra stack ứng với cột click  //*
             if (firstClickedDisks == null)
             {
                 if (disksOfClickedRod.Count == 0) return;                   // Cột không có đĩa nào
-                firstClickedDisks = disksOfClickedRod;                      // Lưu giá trị đĩa lần click 1
+                firstClickedDisks = disksOfClickedRod;                      // Lưu giá trị đĩa lần click 1 //**
                 clickedRod.BorderStyle = BorderStyle.FixedSingle;           // Hiển thị viền
             }
             else if (secondClickedDisks == null)
@@ -105,7 +105,7 @@ namespace ThapHaNoi
                     clickedRod.BorderStyle = BorderStyle.None;              // Ẩn viền
                     return;
                 }
-                secondClickedDisks = disksOfClickedRod;                     // Lưu giá trị đĩa lần click 2
+                secondClickedDisks = disksOfClickedRod;                     // Lưu giá trị đĩa lần click 2 //*****
                 ProcessMovingDisk(clickedRod);                              // Di chuyển đĩa
 
             }
@@ -118,8 +118,8 @@ namespace ThapHaNoi
             }
             else
             {
-                PictureBox firstTopDisk = firstClickedDisks.Peek();                                         //Lấy thông tin đĩa đầu của cột 1
-                PictureBox secondTopDisk = secondClickedDisks.Peek();                                       //Lấy thông tin đĩa đầu của cột 2
+                PictureBox firstTopDisk = firstClickedDisks.Peek();                                         //Lấy thông tin đĩa đầu của cột 1 //**
+                PictureBox secondTopDisk = secondClickedDisks.Peek();                                       //Lấy thông tin đĩa đầu của cột 2 //**
                 if (int.Parse(firstTopDisk.Tag.ToString()) < int.Parse(secondTopDisk.Tag.ToString()))       //So sánh 2 đĩa thông qua thuộc tính tag
                     MoveDisk(new Point(secondTopDisk.Location.X, secondTopDisk.Location.Y - DISKHEIGHT));   //Di chuyển đĩa tới vị trí mới có tọa độ mới
                 else
@@ -130,10 +130,10 @@ namespace ThapHaNoi
         {
             PictureBox firstTopDisk = firstClickedDisks.Pop();  // Lấy ra và xóa đĩa đầu của cột chọn trước
             firstTopDisk.Location = point;                      // Cập nhật tọa độ,tọa dộ mới được truyền vào
-            secondClickedDisks.Push(firstTopDisk);              // Bỏ đĩa đã lấy ra vào đầu của cột đĩa chọn sau
+            secondClickedDisks.Push(firstTopDisk);              // Thêm đĩa đã lấy ra vào đầu của cột đĩa chọn sau
             ++moveCount;                                        // Tăng số lần di chuyển
             lbMoveCout.Text = string.Format("Số lần di chuyển: {0} lần.", moveCount);           // Hiển thị số lần di chuyển
-            firstClickedDisks = secondClickedDisks = null;                                      // Trả 2 lần click về null
+            firstClickedDisks = secondClickedDisks = null;                                      // Trả 2 lần click về null //**
             picRodA.BorderStyle = picRodB.BorderStyle = picRodC.BorderStyle = BorderStyle.None; // Xóa các đường biên
             if (disksC.Count == nudLevel.Value)                 // Kiểm tra cột C nếu bằng số đĩa đã chọn thì chiến thắng
             {
