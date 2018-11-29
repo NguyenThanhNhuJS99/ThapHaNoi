@@ -88,7 +88,7 @@ namespace ThapHaNoi
         }
         private void picRod_Click(object sender, EventArgs e)
         {
-            if (nudLevel.Enabled) return; // Lúc này nút không được điều chỉnh đồng nghĩa với việc hiện tại không chơi nên không click
+            if (nudLevel.Enabled) return; // Lúc này nút được điều chỉnh đồng nghĩa với việc hiện tại không chơi nên không click
             PictureBox clickedRod = (PictureBox)sender;     //Lấy thông tin cột được click
             Stack<PictureBox> disksOfClickedRod = (Stack<PictureBox>)clickedRod.Tag; //Lấy ra stack ứng với cột click  //*
             if (firstClickedDisks == null)
